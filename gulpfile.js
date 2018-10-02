@@ -2,6 +2,8 @@ const gulp = require("gulp");
 const concat = require("gulp-concat");
 const uglify = require("gulp-uglify");
 const watch = require("gulp-watch");
+const cleanCSS = require("gulp-clean-css");
+const concatCSS = require("gulp-concat-css");
 
 
 /*Flytta HTML-filer*/
@@ -18,6 +20,15 @@ gulp.task("convertjs", function(){
         .pipe(gulp.dest("pub/js"));
 });
 
+/*Sammanslå och minifiera CSS-filer*/
+gulp.task("convertcss", function(){
+    return gulp.src("src/css/*.css")
+        .pipe(concatCSS("main.min.css"))
+        .pipe(cleanCSS())
+        .pipe(gulp.dest("pub/css"));
+});
+
+
 /*Uppdateringskoll med gulptillägget gulp-watch*/
 gulp.task("watcher", function(){
     watch("src/js/*.js", function(){
@@ -26,6 +37,9 @@ gulp.task("watcher", function(){
     watch("src/*.html", function(){
         gulp.start("html");
     });
-})
+    watch("src/css/*.css", function(){
+        gulp.start("convertcss");
+    });
+});
 
-gulp.task("default", ["html", "convertjs", "watcher"]);
+gulp.task("default", ["html", "convertjs", "convertcss", "watcher"]);
