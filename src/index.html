@@ -4,28 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/main.min.js"></script>
     <link rel="stylesheet" href="css/main.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat" rel="stylesheet">
     <title>WebbIII - nodejs</title>
 </head>
-<body>
-    <div id="navbar">
-                <a href="#home">Home</a>
-                <a href="#news">News</a>
-                <a href="#contact">Contact</a>
+<body id="home">
+    <div class="nav">
+        <ul>
+            <li><a href="#home">Hem</a></li>
+            <li><a href="#info">Info</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
     </div>
+<header>
+        <div class="headerimg"> <img src="../src/images/laptop-pixabay.jpg" alt=""> </div>
+        <div class="headertxt"><h1>Webbutveckling III</h1><h2>Moment 2</h2></div>  
 
-    <section>
-    <div id="first">
-        <h1>Webbutveckling III - Moment 2</h1>
-        <h2>Node.js och Gulp</h2>
-        <p>Lorem ipsum</p>
-    </div>
-    
+</header>
+    <section class="content" id="info">
+        <div id="first">
+            <h2>Node.js och Gulp</h2>
+            <h3>Syfte och beskrivning</h3>
+            <p>Den här sidan är skapad för att visa användning av Node.js och automatiseringsprecess med Gulp.</p>
+            <h3>Paket som används</h3>
+            <p>De paket jag har använt är:</p>
+            <ul>
+                <li><h4>
+                    Gulp
+                </h4>
+                    <ul>
+                        <li>Används för automatiseringsprocessen</li>
+                    </ul>
+                </li><br>
+                <li><h4>
+                    Gulp-concat
+                </h4>
+                    <ul>
+                        <li>Slår ihop alla javascript-filer till en fil</li>
+                    </ul>
+                </li><br>
+            
+                <li><h4>
+                    Gulp-uglify
+                </h4>
+                    <ul>
+                        <li>Minifierar JavaScript-filen</li>
+                    </ul>
+                </li><br>
+                <li><h4>
+                    Gulp-concat-CSS
+                </h4>
+                    <ul>
+                        <li>Slår samman alla CSS-filer till en fill.</li>
+                    </ul>
+                </li><br>
+                <li><h4>
+                    Gulp-clean-CSS
+                </h4>
+                    <ul>
+                        <li>Minifierar CSS-filen.</li>
+                    </ul>
+                </li><br>
+            
+                <li><h4>
+                    Gulp-imagemin
+                </h4>
+                    <ul>
+                        <li>Minifierar bilderna på sidan.</li>
+                    </ul>
+                </li><br>
+            
+                <li><h4>
+                    Gulp-watch
+                </h4>
+                    <ul>
+                        <li>Kollar efter uppdateringar/ändringar i alla ovan processer.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    <p>Efter dessa processer finns även Default-process där alla ovan processer anropas och körs.</p>
     </section>
 
-    <footer>
+    <footer id="contact">
         <h5>Av: Malin Lind,  <a href="mailto:mali1710@student.miun.se">mali1710@student.miun.se</a></h5>
     </footer>
 </body>
