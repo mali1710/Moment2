@@ -29,3 +29,4 @@ Kollar efter uppdateringar/ändringar i alla ovan processer.
 Efter dessa processer finns även Default-process där alla ovan processer anropas och körs.
 
 ## Om systemet
+För att använda detta system så klonar man ner det till sin egna dator med länken: [https://github.com/mali1710/Moment2.git]. Installera sedan Gulp via NPM och kör kommandot "gulp" så sätts alla processer igång.
